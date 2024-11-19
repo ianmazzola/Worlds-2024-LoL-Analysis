@@ -44,7 +44,7 @@ Key columns analyzed:
 ### Flash Keybind Preferences
 The analysis explored how Flash keybind preferences (D vs F) relate to performance metrics and win rate. Players with Flash on **D** tend to perform slightly better in early game metrics, but no definitive advantage was observed.
 
-## Insights
+## Insights and Results
 
 - Players with exceptional KDA (>7.4) were standout performers, such as T1 botlane players, Keria and Gumayusi.
 - Top lane and jungle roles are heavily influenced by early game metrics, reinforcing the importance of strong early game strategies.
