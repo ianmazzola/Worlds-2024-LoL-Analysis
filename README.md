@@ -1,65 +1,61 @@
-
 # League of Legends Worlds 2024 Analysis
 
-## Project Overview
+## Overview
 
-This project analyzes data from the League of Legends World Championship 2024 to uncover insights about player performance, early game metrics, and their impact on win rate. The analysis focuses on different roles, metrics like KDA, GD@15, XPD@15, and team strategies.
+This project analyzes data from the 2024 League of Legends World Championship to uncover key insights into player performance and team strategies. By focusing on early game metrics and role-specific data, the analysis highlights critical factors that influence the win rate of players and teams.
 
-## Dataset
+## The Questions
 
-The dataset was cleaned and processed for this analysis. Key metrics include:
-- **KDA (Kill/Death/Assist ratio)**
-- **CSM (Creep Score per Minute)**
+1. **How do early game metrics (GD@15, XPD@15, CSD@15) influence the outcome of a match?**
+2. **Which roles have the greatest impact on early game success?**
+3. **Are there significant differences in performance based on Flash keybind preferences (D or F)?**
+4. **What insights can outliers provide about exceptional or poor player performances?**
+
+## Tools I Used
+
+This analysis leverages Python and key data analysis libraries:
+- **pandas**: Data manipulation and cleaning.
+- **numpy**: Numerical operations and calculations.
+- **matplotlib** and **seaborn**: Visualization tools for presenting insights.
+- **Jupyter Notebook**: Environment for interactive data analysis.
+
+## Data Preparation and Cleanup
+
+The dataset required several preprocessing steps, including:
+- Removing duplicates and null values.
+- Handling outliers in metrics like KDA, GD@15, and CSD@15.
+- Grouping and aggregating data by player roles and teams to identify trends.
+
+Key columns analyzed:
+- **KDA (Kill-Death-Assist ratio)**
 - **GD@15 (Gold Difference at 15 minutes)**
 - **CSD@15 (Creep Score Difference at 15 minutes)**
 - **XPD@15 (Experience Difference at 15 minutes)**
 
-## Tools and Libraries
+## The Analysis
 
-The following tools were used for data analysis and visualization:
-- **Python**: Core programming language.
-- **pandas**: Data manipulation and preprocessing.
-- **numpy**: Numerical computations.
-- **matplotlib** and **seaborn**: Data visualization.
+### Role-Based Performance
+- **Top Lane**: Early game performance is strongly correlated with win rate. Gold and creep score differences at 15 minutes are crucial.
+- **ADC**: Early game metrics have the lowest correlation with win rate, emphasizing late-game impact and team coordination.
+- **Support**: Traditional metrics like CSD@15 have low or negative correlations, suggesting that vision and team impact metrics are more relevant.
+- **Mid Lane**: Similar to top laners, early game metrics like GD@15 strongly impact success, but roaming and objective control also play key roles.
+- **Jungle**: Gold and experience efficiency at 15 minutes are critical, while creep score differences are less relevant.
 
-## Key Observations
+### Flash Keybind Preferences
+The analysis explored how Flash keybind preferences (D vs F) relate to performance metrics and win rate. Players with Flash on **D** tend to perform slightly better in early game metrics, but no definitive advantage was observed.
 
-1. **Outliers**:
-   - GENG Chovy, GENG Peyz, T1 Keria, T1 Gumayusi, and LNG Scout had a KDA greater than 7.4.
-   - DK Moham and G2 Mikyx had high average death numbers, explained by their role as supports.
+## Insights
 
-2. **Role-based Analysis**:
-   - Early game metrics strongly impact win rate for Top and Mid players.
-   - ADCs show the lowest correlation between early game metrics and win rate.
+- Players with exceptional KDA (>7.4) were standout performers, such as T1 Keria and GENG Peyz.
+- Top lane and jungle roles are heavily influenced by early game metrics, reinforcing the importance of strong early game strategies.
+- Supports exhibit unique performance trends, where traditional metrics fail to capture their full impact on the game.
 
-## Reproducing the Analysis
+## Challenges I Faced
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/league-worlds-2024-analysis.git
-   ```
+1. **Handling outliers**: Metrics like KDA and GD@15 had extreme values that required careful analysis to avoid skewed conclusions.
+2. **Role-based differences**: Metrics such as CSD@15 varied significantly by role, requiring customized analysis per role.
+3. **Flash Keybind Data**: While interesting, the keybind data presented weak correlations, which made extracting actionable insights challenging.
 
-2. Install the required libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Conclusion
 
-3. Run the Jupyter Notebook to explore the analysis:
-   ```bash
-   jupyter notebook worlds_2024.ipynb
-   ```
-
-## Visualizations
-
-Several visualizations were created, including:
-- Scatter plots to explore correlations between KDA, CS, and GPM.
-- Heatmaps for role-based correlations between metrics.
-- Bar plots comparing early game performance with Flash keybind preferences.
-
----
-
-## Future Improvements
-
-- Incorporate additional metrics like champion picks and bans.
-- Use advanced machine learning techniques to predict win rates.
-
+This analysis reveals how early game performance metrics shape the outcomes of matches in professional League of Legends. Insights from this project can inform strategic decisions for players and teams, such as prioritizing early game dominance in key roles.
