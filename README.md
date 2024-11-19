@@ -46,15 +46,11 @@ The analysis explored how Flash keybind preferences (D vs F) relate to performan
 
 ## Insights
 
-- Players with exceptional KDA (>7.4) were standout performers, such as T1 Keria and GENG Peyz.
+- Players with exceptional KDA (>7.4) were standout performers, such as T1 botlane players, Keria and Gumayusi.
 - Top lane and jungle roles are heavily influenced by early game metrics, reinforcing the importance of strong early game strategies.
 - Supports exhibit unique performance trends, where traditional metrics fail to capture their full impact on the game.
-
-## Challenges I Faced
-
-1. **Handling outliers**: Metrics like KDA and GD@15 had extreme values that required careful analysis to avoid skewed conclusions.
-2. **Role-based differences**: Metrics such as CSD@15 varied significantly by role, requiring customized analysis per role.
-3. **Flash Keybind Data**: While interesting, the keybind data presented weak correlations, which made extracting actionable insights challenging.
+- T1 Faker had a GD@15 of 741, exceeding the upper limit of 708, reinforcing his position as one of the best players.
+- MDK Supa had an XPD@15 of 749, showcasing an outstanding performance in the early stages of the game.
 
 ## Conclusion
 
